@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap');
+
+html, body {
+  height: 100vh;
+  overflow-y: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(27, 125, 159, 0.29);
+  background: rgba(27, 125, 159, 0.07);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: slategray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: slategray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: slategray;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+h2,h3,h4,h5,span {
+  font-family: 'Inter', sans-serif;
+}
+
+textarea {
+/* From https://css.glass */
+  scroll-padding: 20px;
+  width: 90%;
+  height: 23vh;
+  resize: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+
+  /*Glassmorphism*/
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  background: rgba(18, 168, 192, 0.12);
+}
+
+.textarea {
+/* From https://css.glass */
+  scroll-padding: 20px;
+  width: 90%;
+  height: 23vh;
+  resize: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+
+  /*Glassmorphism*/
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  background: rgba(18, 168, 192, 0.12);
+}
+
+.textupper {
+  padding-bottom: 5vh
+}
+
+.leftbar {
+  padding-left: 15px;
+  text-align: left;
+  line-height: normal;
+}
+
+.leftmessage, .leftbar {
+  float: left;
+  text-align: left;
+  line-height: normal;
+  padding-right: 15px;
+}
+
+.rightbar {
+  padding-right: 15px;
+  text-align: right;
+  line-height: normal;
+}
+
+.rightmessage, .rightbar {
+  float: right;
+  text-align: right;
+  line-height: normal;
+  padding-left: 15px;
+}
+
+.text1 {
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(18, 168, 192, 0.31);
+}
+
+.faketext {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+
+.text2 {
+  background: rgba(34, 192, 18, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(34, 192, 18, 0.31);
+}
+
+.text3 {
+  width: 90%;
+  height: 51.5vh;
+  background: rgba(225, 134, 38, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(225, 134, 38, 0.31);
+}
+
+.text4 {
+/* From https://css.glass */
+  width: 90%;
+  height: 23vh;
+  resize: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+
+  /*Glassmorphism*/
+  background: rgba(18, 168, 192, 0.12);
+}
+
+.text4 {
+  background: rgba(225, 134, 38, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(225, 134, 38, 0.31);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.buttons {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.buttons1 {
+  border-radius: 100%;
+  color: black;
+  background: rgba(46, 180, 19, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(46, 180, 19, 0.31);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttons1:hover {
+  background: rgba(31, 124, 13, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(31, 124, 13, 0.31);
+}
+
+.buttons2 {
+  border-radius: 100%;
+  color: black;
+  background: rgba(243, 77, 77, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(243, 77, 77, 0.31);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttons2:hover {
+  background: rgba(182, 48, 48, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(182, 48, 48, 0.31);
+}
+
+.buttons3 {
+  border-radius: 100%;
+  color: black;
+  background: rgba(62, 104, 219, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(62, 104, 219, 0.31);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttons3:hover {
+  background: rgba(29, 68, 175, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(29, 68, 175, 0.31);
+}
+
+.buttons4 {
+  border-radius: 100%;
+  color: black;
+  background: rgba(166, 52, 208, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(166, 52, 208, 0.31);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttons4:hover {
+  background: rgba(114, 25, 147, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(114, 25, 147, 0.31);
+}
+
+.centered {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.clear, .clear:hover {
+   background-image: url("./icons8-clear-64.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 25px;
+}
+
+.download, .download:hover {
+   background-image: url("./icons8-download-48.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 25px;
+}
+
+.language, .language:hover {
+   background-image: url("./icons8-language-30.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 25px;
+}
+
+.refresh, .refresh:hover {
+   background-image: url("./icons8-refresh-32.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 25px;
+}
+
+.back, .back:hover {
+   background-image: url("./icons8-return-64.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 25px;
+}
+
+.done, .done:hover {
+   background-image: url("./icons8-done-50.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 25px;
+}
+
+.select1 {
+  font-size: 15px;
+  background: rgba(52, 137, 235, 0.34);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(52, 137, 235, 0.31);
+  padding-left: .5em;
+  outline: none;
+}
+
+.select2 {
+  font-size: 15px;
+  background: rgba(52, 235, 57, 0.34);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(52, 235, 57, 0.31);
+  padding-left: .5em;
+  outline: none;
+}
+
+.mark1 {
+  background-color: rgba(193, 225, 212, 0.80);
+  color: black;
+}
+
+.mark2 {
+  background-color: rgba(190, 221, 231, 0.80);
+  color: black;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClassTranslate</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="icon.png">
+<!--   <style>
+    @media only screen and (max-width: 980px) {  
+    html, body,  {
+      display: none;
+      visibility: hidden;
+     };
+    #main {
+      display: none;
+      visibility: hidden;
+    }
+    };
+  </style> -->
+</head>
+
+<body id='bod'>
+  <div id="main">
+    <div class="row">
+    <div class="column"'>
+      <center>
+        <h1 id='primary-language'>English</h1>
+      </center>
+      <center>
+        <div class='textupper faketext'><textarea id='primary-input' class='text1' placeholder='Primary language input.'></textarea></div>
+      </center>
+      <center>
+        <div class='textupper faketext'><textarea id="primary-clarification" class='text1' placeholder='Primary language clarification.' readonly></textarea> <button class='buttons1 buttons done' onclick='clarificationConfirmed("primary")' style='position: absolute; bottom:10px;right:10px;visibility:visible;' id='primaryconfirm'></button></div>
+      </center>
+      <center>
+        <div class="faketext"><textarea id="primary-output" class='text1' placeholder='Primary language to secondary language.' readonly></textarea></div>
+      </center>
+    </div>
+      <div class="row">
+    <div class="column"'>
+      <center>
+        <h1 id='secondary-language'>Secondary Language</h1>
+      </center>
+      <center>
+        <div class='textupper faketext'><textarea id='secondary-input' class='text2' placeholder='Choose a secondary language.'></textarea></div>
+      </center>
+      <center>
+        <div class='textupper faketext'><textarea id="secondary-clarification" class='text2 ' placeholder='Choose a secondary language.' readonly></textarea><button class='buttons1 buttons done' onclick='clarificationConfirmed("secondary")' style='position: absolute; bottom:10px;right:10px;visibility:visible;' id='secondaryconfirm'></button></div>
+      </center>
+      <center>
+        <div class='faketext'><textarea id="secondary-output" class='text2' placeholder='Choose a secondary language.' readonly></textarea></div>
+      </center>
+    </div>
+        <div class="row">
+    <div class="column"'>
+      <center>
+        <h1>Transcript</h1>
+      </center>
+      <center>
+        <div class='textupper faketext'><div id='transcriptwrapper'><div id='transcript' class='text3' style='display: block; line-height: 15px; overflow: scroll;'></div></div></div>
+      </center>
+      <center>
+        <div id="dashboard" class='faketext text4'>
+          <div class='centered' id='centered'>
+            <button class='buttons1 buttons refresh' onclick='refreshSection("primary"); refreshSection("secondary")' id='btn1'></button>
+            <button class='buttons2 buttons clear' onclick='clearSection("primary"); clearSection("secondary")' id='btn2'></button>
+            <button class='buttons3 buttons language' onclick='languageSelector()' id='btn3'></button>
+            <button class='buttons4 buttons download' onclick='download()' id='btn4'></button>
+            <form action="" class="language-picker__form" style="padding-bottom: 1vh;visibility:hidden;position: absolute" id='form1'>
+      <label for="language1">Primary:</label>
+      <select name="language1" id="language1" class="select1" style='margin-left: 22px;'>
+        <option lang="en" value="en">English</option>
+        <option lang="uk" value="uk">Ukrainian</option>
+        <option lang="fr" value="fr">French</option>
+        <option lang="es" value="es">Spanish</option>
+        <option lang="pt" value="pt">Portuguese</option>
+        <option lang="de" value="de">German</option>
+        <option lang="ru" value="ru">Russian</option>
+        <option lang="ja" value="ja">Japanese</option>
+        <option lang="ko" value="ko">Korean</option>
+        <option lang="el" value="el">Greek</option>
+        <option lang="tr" value="tr">Turkish</option>
+        <option lang="mn" value="mn">Mongolian</option>
+        <option lang="ht" value="ht">Haitian Creole</option>
+      </select>
+    </form><form action="" class="language-picker__form" style='visibility:hidden;position: absolute' id='form2'>
+          <label for="language2">Secondary:</label>
+      
+          <select name="language2" id="language2" class="select2">
+            <option lang='en' value='en'>None</option>
+            <option lang="en" value="en">English</option>
+            <option lang="uk" value="uk">Ukrainian</option>
+            <option lang="fr" value="fr">French</option>
+            <option lang="es" value="es">Spanish</option>
+            <option lang="pt" value="pt">Portuguese</option>
+            <option lang="de" value="de">German</option>
+            <option lang="ru" value="ru">Russian</option>
+            <option lang="ja" value="ja">Japanese</option>
+            <option lang="ko" value="ko">Korean</option>
+            <option lang="el" value="el">Greek</option>
+            <option lang="tr" value="tr">Turkish</option>
+            <option lang="mn" value="mn">Mongolian</option>
+            <option lang="ht" value="ht">Haitian Creole</option>
+          </select>
+        </form>
+          </div>
+          <button class='buttons1 buttons done' onclick='resetDash()' style='position: absolute; bottom:10px;right:10px;visibility:hidden;' id='backbutton'></button>
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <script src="script.js"></script>
+  <script src="translation.js"></script>
+  <script src="log.js"></script>
+  <script src="typingtimer.js"></script>
+  <script src="transcript.js"></script>
+  <script>
+    const mq = window.matchMedia( "(min-width: 960px)" );
+    if (mq.matches) {
+      //pass
+    } else {
+         window.location.replace("https://info.classtranslate.com");
+    }
+  </script>
+  <script>
+    window.addEventListener("load", (event) => {
+      languageSelector()
+    });
+  </script>
+</body>
+  
+</html>
