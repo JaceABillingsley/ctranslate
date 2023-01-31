@@ -27,7 +27,7 @@ myInput2.addEventListener('keyup', () => {
 
 function doneTyping2 () {
   async function userAction2() {
-    const response = await fetch(`translation.apis.jacebapps.com/${lang2}/${lang1}?content=${document.getElementById('secondary-input').value}`);
+    const response = await fetch(`https://translation.apis.jacebapps.com/${lang2}/${lang1}?content=${document.getElementById('secondary-input').value}`);
     const myJson = await response.json(); 
     document.getElementById('secondary-clarification').value = myJson.clarification;
   } 
@@ -36,7 +36,7 @@ function doneTyping2 () {
 
 function doneTyping () {
   async function userAction() {
-    const response = await fetch(`translation.apis.jacebapps.com/${lang1}/${lang2}?content=${document.getElementById('primary-input').value}`);
+    const response = await fetch(`https://translation.apis.jacebapps.com/${lang1}/${lang2}?content=${document.getElementById('primary-input').value}`);
     const myJson = await response.json(); 
     document.getElementById('primary-clarification').value = myJson.clarification;
   } 
