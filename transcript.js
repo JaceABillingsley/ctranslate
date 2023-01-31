@@ -26,7 +26,7 @@ let myInputTranscript = document.getElementById('primary-input');
 
 function transcript2 () {
   async function userAction2() {
-    const response = await fetch(`translation.apis.jacebapps.com/${lang2}/${lang1}?content=${document.getElementById('secondary-input').value}`);
+    const response = await fetch(`https://translation.apis.jacebapps.com/${lang2}/${lang1}?content=${document.getElementById('secondary-input').value}`);
     const myJson = await response.json(); 
     document.getElementById('transcript').innerHTML += `<span class='leftmessage leftbar'><mark class='mark1'>| ${myJson.translated}</mark></span><br><br>`;
     var objDiv = document.getElementById("transcript");
@@ -38,7 +38,7 @@ function transcript2 () {
 
 function transcript () {
   async function userAction() {
-    const response = await fetch(`translation.apis.jacebapps.com/${lang1}/${lang2}?content=${document.getElementById('primary-input').value}`);
+    const response = await fetch(`https://translation.apis.jacebapps.com/${lang1}/${lang2}?content=${document.getElementById('primary-input').value}`);
     const myJson = await response.json(); 
     document.getElementById('transcript').innerHTML += `<span class='leftmessage leftbar'><mark class='mark2'>| ${myJson.translated}</mark></span><br><br>`;
     var objDiv = document.getElementById("transcript");
