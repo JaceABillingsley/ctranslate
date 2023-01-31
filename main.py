@@ -1,6 +1,8 @@
 from flask import Flask, send_file
+from flask_cors import CORS
 
 app = Flask('')
+CORS(app)
 
 @app.route('/')
 def index():
