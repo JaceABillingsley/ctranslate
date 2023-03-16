@@ -55,3 +55,6 @@ function pushMessage(message) {
   document.getElementById('transcript').innerHTML += `<span>${message}</span>`;
 }
 document.getElementById('transcript').innerHTML += `<br>`;
+
+
+//test
