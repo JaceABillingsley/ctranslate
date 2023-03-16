@@ -7,13 +7,13 @@ async function translate(section) {
     var temp1 = lang2; 
     var temp2 = lang1;
   };
-  const response = await fetch(`https://translation.apis.jacebapps.com/${temp1}/${temp2}?content=${document.getElementById(section + '-input').value}`);
+  const response = await fetch(`https://translation.jacebapps.com/${temp1}/${temp2}?content=${document.getElementById(section + '-input').value}`);
   let myJson = await response.json(); 
   document.getElementById(section + '-clarification').value = myJson.clarification;
 }
 
 async function changeLang(section, language) {
-  const response = await fetch(`https://translation.apis.jacebapps.com/get${section}/${language}`);
+  const response = await fetch(`https://translation.jacebapps.com/get${section}/${language}`);
   const myJson = await response.json(); 
   document.getElementById(section + '-input').placeholder = myJson.input;
   document.getElementById(section + '-output').placeholder = myJson.output;
