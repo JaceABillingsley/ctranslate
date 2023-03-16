@@ -17,7 +17,7 @@ async function refreshSection(section) {
     var temp1 = lang2; 
     var temp2 = lang1;
   };
-  const response = await fetch(`https://translation.apis.jacebapps.com/${temp1}/${temp2}?content=${document.getElementById(section + '-input').value}`);
+  const response = await fetch(`https://translation.jacebapps.com/${temp1}/${temp2}?content=${document.getElementById(section + '-input').value}`);
   const myJson = await response.json(); 
   document.getElementById(section + '-output').value = myJson.translated;
   document.getElementById(section + '-clarification').value = myJson.clarification;
@@ -32,7 +32,7 @@ async function clarificationConfirmed(section) {
     var temp1 = lang2; 
     var temp2 = lang1
   };
-  const response = await fetch(`https://translation.apis.jacebapps.com/${temp1}/${temp2}?content=${document.getElementById(section + '-input').value}`);
+  const response = await fetch(`https://translation.jacebapps.com/${temp1}/${temp2}?content=${document.getElementById(section + '-input').value}`);
   const myJson = await response.json(); 
   document.getElementById(section + '-clarification').value = myJson.clarification;
   document.getElementById(section + '-output').value = myJson.translated;
